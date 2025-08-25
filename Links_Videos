@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Materials - Weekly Resources</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .week-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        
+        .week-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e1e8ed;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .week-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+            background-size: 300% 300%;
+            animation: gradientShift 3s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .week-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .week-number {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .week-number::before {
+            content: '📚';
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .week-description {
+            color: #6c757d;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .drive-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .drive-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .drive-link::after {
+            content: ' ↗';
+            margin-left: 5px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #6c757d;
+            border-top: 1px solid #e1e8ed;
+            margin-top: 20px;
+        }
+        
+        .progress-indicator {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .progress-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            opacity: 0.3;
+            transition: opacity 0.3s ease;
+        }
+        
+        .progress-dot.active {
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .week-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Student Preparation_1</h1>
+            <p>Business Book Summaries • Supply Chain Concepts • Industrial Thinkers</p>
+        </div>
+        
+        <div class="content">
+            <div class="progress-indicator">
+                <div class="progress-dot active"></div>
+                <div class="progress-dot active"></div>
+                <div class="progress-dot active"></div>
+                <div class="progress-dot active"></div>
+                <div class="progress-dot active"></div>
+                <div class="progress-dot active"></div>
+                <div class="progress-dot active"></div>
+                <div class="progress-dot active"></div>
+                <div class="progress-dot active"></div>
+                <div class="progress-dot active"></div>
+                <div class="progress-dot active"></div>
+                <div class="progress-dot active"></div>
+            </div>
+            
+            <div class="week-grid">
+                <div class="week-card">
+                    <div class="week-number">Week 1</div>
+                    <a href="https://drive.google.com/drive/folders/1s2WYHjpiTedr6AWu4SlJjfDaQvsNYyLI?usp=drive_link" class="drive-link" target="_blank">Student Videos 1</a>
+                </div>
+                
+                <div class="week-card">
+                    <div class="week-number">Week 2</div>
+                    <a href="https://drive.google.com/drive/folders/1LN2cewzQtUULhMBnEuJo0O53KHTuiMhJ?usp=drive_link" class="drive-link" target="_blank">Student Videos 2</a>
+                </div>
+                
+                <div class="week-card">
+                    <div class="week-number">Week 3</div>
+                    <a href="https://drive.google.com/drive/folders/10-6pvTHYMrk4UfSQYufGZiPC2UEllJ1N?usp=drive_link" class="drive-link" target="_blank">Student Videos 3</a>
+                </div>
+                
+                <div class="week-card">
+                    <div class="week-number">Week 4</div>
+                    <a href="https://drive.google.com/drive/folders/1vVlgWOdNlWEwV_YztMYxYmLY-fQb7l4s?usp=drive_link" class="drive-link" target="_blank">Student Videos 4</a>
+                </div>
+                
+                <div class="week-card">
+                    <div class="week-number">Week 5</div>
+                    <a href="https://drive.google.com/drive/folders/1ePkcDs8Q8ILRNzrPMbrQpViuTqzH9mP6?usp=drive_link" class="drive-link" target="_blank">Student Videos 5</a>
+                </div>
+                
+                <div class="week-card">
+                    <div class="week-number">Week 6</div>
+                    <a href="https://drive.google.com/drive/folders/1-t5fxhGcNyeMbemKNC9K1bZDRZXmq7kJ?usp=drive_link" class="drive-link" target="_blank">Student Videos 6</a>
+                </div>
+                
+                <div class="week-card">
+                    <div class="week-number">Week 7</div>
+                    <a href="https://drive.google.com/drive/folders/1Txnh6R-eAUOudzMPk8VB6PjqwvNd4V9z?usp=drive_link" class="drive-link" target="_blank">Student Videos 7</a>
+                </div>
+                
+                <div class="week-card">
+                    <div class="week-number">Week 8</div>
+                    <a href="https://drive.google.com/drive/folders/1i8s80HcB-qah_Hnfo1pJk_0LDkaz88QT?usp=drive_link" class="drive-link" target="_blank">Student Videos 8</a>
+                </div>
+                
+                <div class="week-card">
+                    <div class="week-number">Week 9</div>
+                    <a href="https://drive.google.com/drive/folders/1_9_FbVTt0Ufy76v31vS8bjC2OdHdVnXk?usp=drive_link" class="drive-link" target="_blank">Student Videos 9</a>
+                </div>
+                
+                <div class="week-card">
+                    <div class="week-number">Week 10</div>
+                    <a href="https://drive.google.com/drive/folders/1_B2BsLD-axFF6a5lEcfvcXaTtRV_FoIN?usp=drive_link" class="drive-link" target="_blank">Student Videos 10</a>
+                </div>
+                
+                <div class="week-card">
+                    <div class="week-number">Week 11</div>
+                    <a href="https://drive.google.com/drive/folders/1FLy3DAOVSa3jlrIY2yxxoBNw0fhVUDNu?usp=drive_link" class="drive-link" target="_blank">Student Videos 11</a>
+                </div>
+                
+                <div class="week-card">
+                    <div class="week-number">Week 12</div>
+                    <a href="https://drive.google.com/drive/folders/1V2qqlIY6pjuskGceLTbFXPLxJ8i_Eg3v?usp=drive_link" class="drive-link" target="_blank">Student Videos 12</a>
+                </div>
